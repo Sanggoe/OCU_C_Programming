@@ -14,8 +14,8 @@ int main() {
 	int usedData;									// 사용한 데이터량을 담을 변수
 	int tempData;									// 사용한 데이터별 요금 계산을 위해 데이터량을 담을 임시변수
 	int usedFee = 0;								// 종량제 이용 요금을 계산해서 담을 변수
-	int totalFee = 0;						jrwl
-		// 전체 이용요금을 계산해서 담을 변수
+	int totalFee = 0;
+	// 전체 이용요금을 계산해서 담을 변수
 	int tax = 0;										// 세금을 담을 변수
 
 	printf("플랜: ");
