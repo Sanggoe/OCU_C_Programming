@@ -49,7 +49,7 @@ void showStudentsScore(int* scores) {
 			isSameValue = 1; // 점수가 같다고 체크
 			temp = i; // 등수 임시 저장
 			while (isSameValue) { // 다음 등수와 동점이 아닐 때 까지
-				if (i % 5 == 0) {
+				if (i % 5 == 0) { // 5의 배수째 결과 출력할 때 마다 줄바꿈
 					printf("\n");
 				}
 				printf("[%3d등, %3d점, %c]  ", temp, *(scores + i), *(gradeList + j) ); // 같은 석차 출력
@@ -70,13 +70,13 @@ void showStudentsScore(int* scores) {
 			isNextGrade = 0;
 		}
 
-		if (i % 5 == 0) {
+		if (i % 5 == 0) { // 5의 배수째 결과 출력할 때 마다 줄바꿈
 			printf("\n");
 		}
-		printf("[%3d등, %3d점, %c]  ", i + 1, *(scores + i), *(gradeList + j));
 
-	} // scores 배열의 첫행인 등수, 둘째 행인 학점, 셋째 행인 점수를 출력
-	printf("\n");
+		if (i<STUDENTS)
+			printf("[%3d등, %3d점, %c]  ", i + 1, *(scores + i), *(gradeList + j));
+	}
 }
 
 int main(void) {
